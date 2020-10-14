@@ -1,0 +1,383 @@
+# Algoritmos e Programação de Computadores I
+
+Repositório criado para realização de atividades práticas desta disciplina.
+
+
+
+
+Aluna: Ilane Lira Costa                  matrícula: 1422140036
+
+Atividades de sala – Algoritmo e Programação.
+                                                       Lista 1 
+1
+#include <stdio.h>
+
+int main() {
+
+  float r; /*raio*/
+  float p /*perimetro*/;
+  
+  printf("Por gentileza, informe o valor do raio :");
+  scanf("%f", &r);
+  
+  p=2 * 3.14 * r ;
+  printf(" O valor perímetro é: %.2f\n",p);
+  
+  return 0;
+}
+
+
+2
+#include <stdio.h>
+
+int main() 
+{
+int RA, minute, hour, second, resto ;
+printf("Digite por gentileza os segundos :");
+scanf("%d", &RA);
+hour = RA / 3600;
+resto = RA % 3600;
+minute = resto / 60;
+second = resto % 60;
+
+printf ("Horas: %d , Minutos: %d , Segundos: %d\n", hour,minute,second);
+
+  return 0;
+}
+
+
+3
+#include <stdio.h>
+
+int main() 
+{
+int gigabytes, bytes ;
+printf("Digite por gentileza a quantidade de Gigabytes :");
+scanf("%d", &gigabytes);
+
+bytes = 1073741824 *gigabytes;
+
+printf ("Bytes: %d\n", bytes);
+
+  return 0;
+}
+
+                                                       Lista 2
+
+1)
+#include <stdio.h>
+int main ()
+{
+int num;
+printf("Por gentileza, digite um número inteiro: ");
+scanf("%d",&num);
+if(num%2==0)//operador %
+{
+printf("Par");
+}
+else
+printf("Ímpar");
+
+  return 0;
+}
+
+2)
+#include <stdio.h>
+int main ()
+{
+int num , valor,desc;
+printf("Por gentileza, digite o valor da compra: ");
+scanf("%d",&num);
+if(num <= 100.00)//operador %
+{
+desc= num *0.01;
+valor= num - desc ;
+
+printf("O valor final com desconto será: %d\n",valor);
+
+}
+ 
+if (num>=100.01 && num<=5000.00) //operador %
+{
+desc= num *0.05;
+valor= num - desc ;
+
+printf("O valor final com desconto será: %d\n",valor);
+
+}
+ 
+if(num > 5000.00)//operador %
+{
+desc= num * 0.10;
+valor= num - desc ;
+
+printf("O valor final com desconto será: %d\n", valor);
+
+}
+
+
+  return 0;
+}
+
+3)
+
+
+                                                                Lista 3
+
+1) #include <stdio.h>
+int main ()
+{
+    int n;
+    for (n=3 ; n <=100 ; n = n + 3)
+    { printf("\n% i", n); }
+    
+    printf("\n\n");
+  
+
+  
+
+
+
+  return 0;
+}
+
+
+
+
+
+2)
+#include <stdio.h>
+
+int main()
+
+{
+
+    int t1, t2, h;
+
+    t1 = 0;
+
+    t2 = 1;
+
+    for(int i = 0; i < 10; i++)
+
+   {
+
+         h = t1 + t2;
+
+         t1 = t2;
+
+         t2 = h;
+
+         printf("%d", h);
+
+ }    
+ 
+}
+
+
+3)
+
+#include <stdio.h>
+int main ()
+{
+int fat, n;
+printf("Insira por gentileza um valor no qual voce deseja calcular seu fatorial: ");
+scanf("%d", &n);
+for(fat = 1; n > 1; n = n - 1)
+fat = fat * n;
+printf("\n   O valor fica: %d", fat);
+
+  return 0;
+}
+
+
+
+
+
+                                                       Lista 4
+
+#include<stdio.h>
+int main()
+{
+ int numero, guarda_maior, guarda_menor;
+ int i;
+
+ printf("Entre com o 1o numero inteiro: ");
+ scanf("%i", &numero);
+
+ guarda_maior=numero;
+ guarda_menor=numero;
+
+ for(i=1; i<2; i++)
+ {
+ printf("\nEntre com o %do numero inteiro: ",i+1);
+ scanf("%i", &numero);
+
+ if(numero>guarda_maior)
+ guarda_maior=numero;
+ else
+ if(numero<guarda_menor)
+ guarda_menor=numero;
+ }
+
+ printf("\nO maior numero entrado e: %d", guarda_maior); 
+
+ return 0;
+}
+
+
+
+2)
+#include <stdio.h>
+
+int main() 
+{
+
+
+  int ano;
+  printf("\n Digite o ano por gentileza: ");
+  scanf("%d", &ano);
+  
+  if (ano % 4 == 0 && (ano % 400 == 0 || ano % 100 != 0)) {
+    printf("\nAno bissexto.\n");
+  
+  }
+  
+  else {
+    printf("\n Ano nao bissexto .\n");
+  
+  }
+
+  return 0;
+}
+
+
+3)
+
+
+
+
+
+
+
+
+
+                                                                           Lista 5
+
+1)
+
+#include<stdio.h>
+int main()
+{
+ int numero, guarda_maior, guarda_menor;
+ int i;
+
+ printf("Entre com o 1o numero inteiro: ");
+ scanf("%i", &numero);
+
+ guarda_maior=numero;
+ guarda_menor=numero;
+
+ for(i=1; i<10; i++)
+ {
+ printf("\nEntre com o %do numero inteiro: ",i+1);
+ scanf("%i", &numero);
+
+ if(numero>guarda_maior)
+ guarda_maior=numero;
+ else
+ if(numero<guarda_menor)
+ guarda_menor=numero;
+ }
+
+ printf("\nO menor numero entrado e: %d", guarda_menor);
+ printf("\nO maior numero entrado e: %d", guarda_maior); 
+
+ return 0;
+}
+
+
+
+
+2) #include <stdio.h>
+
+int main(){
+ int i, v[80];
+
+ for(i=0;i<79;i++){
+ printf("Elemento[%d]= ",i);
+ scanf("%d",&v[i]);
+ }
+ 
+ printf("\n::: Valores originais :::\n");
+ for(i=0;i<79;i++)
+ printf("%d\n",v[i]);
+ 
+ printf("\n::: Valores na ordem inversa :::\n");
+ for(i=79;i>=0;i--)
+ printf("%d\n",v[i]);
+ return 0;
+}
+
+3)
+
+
+                                                       Lista 6
+
+1)
+#include <stdio.h>
+
+int main()
+{
+
+    int dia, mes, ano;
+    long int amd;
+    char data[9] = {'\0'};
+
+    printf("Entre com a data (DD/MM/AAAA): "); 
+    scanf("%d/%d/%d", &dia, &mes, &ano);
+
+    printf("\n\n");
+
+    sprintf(data, "%d%02d%02d", dia, mes, ano);
+    amd = atol(data);
+
+    printf("Dia = %d\n", dia);
+    printf("Mes = %d\n", mes);
+    printf("Ano = %d\n", ano);
+    printf("DDMMAAAA= %ld\n", amd);
+
+    sprintf(data, "%d%02d%02d", mes, dia, ano);
+    amd = atol(data);
+
+    printf("Mes = %d\n", mes);
+    printf("Dia = %d\n", dia);
+    printf("Ano = %d\n", ano);
+    printf("MMDDAAAA= %ld\n", amd);
+    
+
+    return 0;
+}
+
+
+2)
+3)
+#include <stdio.h>
+
+int main( )
+{
+char nomes[5][21];
+int i;
+for (i = 0; i < 5; i++)
+{
+printf("Digite o mês %d: ", i+1);
+scanf(" %s", nomes[i]);
+}
+printf("\n");
+for (i = 0; i < 5; i++)
+{
+printf("%d¬ %s\n", i+1, nomes[i]);
+}
+return 0;
+}
+
