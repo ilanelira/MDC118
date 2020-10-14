@@ -1,0 +1,52 @@
+1
+#include <stdio.h>
+
+int main() {
+
+  float r; /*raio*/
+  float p /*perimetro*/;
+  
+  printf("Por gentileza, informe o valor do raio :");
+  scanf("%f", &r);
+  
+  p=2 * 3.14 * r ;
+  printf(" O valor perímetro é: %.2f\n",p);
+  
+  return 0;
+}
+
+
+2
+#include <stdio.h>
+
+int main() 
+{
+int RA, minute, hour, second, resto ;
+printf("Digite por gentileza os segundos :");
+scanf("%d", &RA);
+hour = RA / 3600;
+resto = RA % 3600;
+minute = resto / 60;
+second = resto % 60;
+
+printf ("Horas: %d , Minutos: %d , Segundos: %d\n", hour,minute,second);
+
+  return 0;
+}
+
+
+3
+#include <stdio.h>
+
+int main() 
+{
+int gigabytes, bytes ;
+printf("Digite por gentileza a quantidade de Gigabytes :");
+scanf("%d", &gigabytes);
+
+bytes = 1073741824 *gigabytes;
+
+printf ("Bytes: %d\n", bytes);
+
+  return 0;
+}
