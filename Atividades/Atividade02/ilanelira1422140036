@@ -1,0 +1,56 @@
+1)
+#include <stdio.h>
+int main ()
+{
+int num;
+printf("Por gentileza, digite um número inteiro: ");
+scanf("%d",&num);
+if(num%2==0)//operador %
+{
+printf("Par");
+}
+else
+printf("Ímpar");
+
+  return 0;
+}
+
+2)
+#include <stdio.h>
+int main ()
+{
+int num , valor,desc;
+printf("Por gentileza, digite o valor da compra: ");
+scanf("%d",&num);
+if(num <= 100.00)//operador %
+{
+desc= num *0.01;
+valor= num - desc ;
+
+printf("O valor final com desconto será: %d\n",valor);
+
+}
+ 
+if (num>=100.01 && num<=5000.00) //operador %
+{
+desc= num *0.05;
+valor= num - desc ;
+
+printf("O valor final com desconto será: %d\n",valor);
+
+}
+ 
+if(num > 5000.00)//operador %
+{
+desc= num * 0.10;
+valor= num - desc ;
+
+printf("O valor final com desconto será: %d\n", valor);
+
+}
+
+
+  return 0;
+}
+
+3)
