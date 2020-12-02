@@ -1,0 +1,76 @@
+
+1)
+
+#include<stdio.h>
+int main()
+{
+ int numero, guarda_maior, guarda_menor;
+ int i;
+
+ printf("Entre com o 1o numero inteiro: ");
+ scanf("%i", &numero);
+
+ guarda_maior=numero;
+ guarda_menor=numero;
+
+ for(i=1; i<10; i++)
+ {
+ printf("\nEntre com o %do numero inteiro: ",i+1);
+ scanf("%i", &numero);
+
+ if(numero>guarda_maior)
+ guarda_maior=numero;
+ else
+ if(numero<guarda_menor)
+ guarda_menor=numero;
+ }
+
+ printf("\nO menor numero entrado e: %d", guarda_menor);
+ printf("\nO maior numero entrado e: %d", guarda_maior); 
+
+ return 0;
+}
+
+
+2) #include <stdio.h>
+
+int main(){
+ int i, v[80];
+
+ for(i=0;i<79;i++){
+ printf("Elemento[%d]= ",i);
+ scanf("%d",&v[i]);
+ }
+ 
+ printf("\n::: Valores originais :::\n");
+ for(i=0;i<79;i++)
+ printf("%d\n",v[i]);
+ 
+ printf("\n::: Valores na ordem inversa :::\n");
+ for(i=79;i>=0;i--)
+ printf("%d\n",v[i]);
+ return 0;
+}
+
+3)
+#include <stdio.h>
+
+int main() {
+ char st[80] ,stinv[80];
+ int i, j, fim ;
+ printf("Digite os elementos:");
+ scanf("%d\n",st); 
+ fgets (st,80, stdin);
+ fim=0;
+ while(st[fim] !='\0' && st[fim]!='\n')
+ i= fim -1;
+ j=0;
+ while(j<fim){
+     stinv [j] = st[i];
+     i--;
+     j++;
+}
+stinv[fim]='\0';
+printf("inversa;\n%s\n", stinv);
+    return 0;
+}
