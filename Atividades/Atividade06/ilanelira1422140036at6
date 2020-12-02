@@ -1,0 +1,82 @@
+1)
+#include <stdio.h>
+
+int main()
+{
+
+    int dia, mes, ano;
+    long int amd;
+    char data[9] = {'\0'};
+
+    printf("Entre com a data (DD/MM/AAAA): "); 
+    scanf("%d/%d/%d", &dia, &mes, &ano);
+
+    printf("\n\n");
+
+    sprintf(data, "%d%02d%02d", dia, mes, ano);
+    amd = atol(data);
+
+    printf("Dia = %d\n", dia);
+    printf("Mes = %d\n", mes);
+    printf("Ano = %d\n", ano);
+    printf("DDMMAAAA= %ld\n", amd);
+
+    sprintf(data, "%d%02d%02d", mes, dia, ano);
+    amd = atol(data);
+
+    printf("Mes = %d\n", mes);
+    printf("Dia = %d\n", dia);
+    printf("Ano = %d\n", ano);
+    printf("MMDDAAAA= %ld\n", amd);
+    
+
+    return 0;
+}
+
+
+2)
+#include <stdio.h>
+#include<string.h>
+
+struct cadastro
+{
+    char nome [30];
+    unsigned int telefone;
+};
+
+int main() {
+  struct cadastro meu_cadastro ;
+  
+  printf("Qual o seu nome:");
+  scanf("%[^\n]s", meu_cadastro.nome);
+  printf("Qual o seu telefone:");
+  scanf("%ui",&meu_cadastro.telefone);
+  
+  printf("\n CADASTRO \n");
+  printf("Nome %s - Telefone %u",
+  meu_cadastro.nome,
+  meu_cadastro.telefone
+  );
+  
+  
+  return 0;
+}
+3)
+#include <stdio.h>
+
+int main( )
+{
+char nomes[5][21];
+int i;
+for (i = 0; i < 5; i++)
+{
+printf("Digite o mês %d: ", i+1);
+scanf(" %s", nomes[i]);
+}
+printf("\n");
+for (i = 0; i < 5; i++)
+{
+printf("%d¬ %s\n", i+1, nomes[i]);
+}
+return 0;
+}
