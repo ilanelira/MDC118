@@ -1,0 +1,58 @@
+1)
+#include<stdio.h>
+int main()
+{
+ int numero, guarda_maior, guarda_menor;
+ int i;
+
+ printf("Entre com o 1o numero inteiro: ");
+ scanf("%i", &numero);
+
+ guarda_maior=numero;
+ guarda_menor=numero;
+
+ for(i=1; i<2; i++)
+ {
+ printf("\nEntre com o %do numero inteiro: ",i+1);
+ scanf("%i", &numero);
+
+ if(numero>guarda_maior)
+ guarda_maior=numero;
+ else
+ if(numero<guarda_menor)
+ guarda_menor=numero;
+ }
+
+ printf("\nO maior numero entrado e: %d", guarda_maior); 
+
+ return 0;
+}
+
+
+
+2)
+#include <stdio.h>
+
+int main() 
+{
+
+
+  int ano;
+  printf("\n Digite o ano por gentileza: ");
+  scanf("%d", &ano);
+  
+  if (ano % 4 == 0 && (ano % 400 == 0 || ano % 100 != 0)) {
+    printf("\nAno bissexto.\n");
+  
+  }
+  
+  else {
+    printf("\n Ano nao bissexto .\n");
+  
+  }
+
+  return 0;
+}
+
+
+3)
